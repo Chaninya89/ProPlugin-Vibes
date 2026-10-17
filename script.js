@@ -27,9 +27,4 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.about, .value, .perk, .job, .cta-banner, .c-card, .section-head')
   .forEach(el => { el.classList.add('reveal'); io.observe(el); });
 
-// Floating apply button after hero
-const fab = document.querySelector('.fab');
-const hero = document.querySelector('.hero');
-new IntersectionObserver(([e]) => fab.classList.toggle('show', !e.isIntersecting)).observe(hero);
-
 document.getElementById('year').textContent = new Date().getFullYear();
